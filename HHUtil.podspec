@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-		   Base tools for development
+		   Base tools for development!!
                    DESC
 
   s.homepage     = "https://github.com/tmac0329/HHUtil"
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "HHUtil/**/*.{h,m}"
+  s.source_files  = "HHUtil/**/*.{c,h,hh,m,mm}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
