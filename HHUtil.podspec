@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHUtil"
-  s.version      = "0.0.2"
+  s.version      = "0.0.4"
   s.summary      = "Base tools for development"
 
   # This description is used to generate tags and improve search results.
