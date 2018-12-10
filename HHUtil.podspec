@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHUtil"
-  s.version      = "0.0.17"
+  s.version      = "0.0.18"
   s.summary      = "Base tools for development"
 
   # This description is used to generate tags and improve search results.
@@ -132,7 +132,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "SVProgressHUD"
+  #s.dependency "SVProgressHUD"
   #s.dependency "AFNetworking"
   s.dependency "MBProgressHUD"
 end
