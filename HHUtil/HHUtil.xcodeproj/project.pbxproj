@@ -17,6 +17,7 @@
 		18C6396521BA5AD000E059A1 /* HHUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6396421BA5AD000E059A1 /* HHUtilTests.m */; };
 		18C6397021BA5AD000E059A1 /* HHUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6396F21BA5AD000E059A1 /* HHUtilUITests.m */; };
 		18C6398321BA693A00E059A1 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6398221BA693A00E059A1 /* TestVC.m */; };
+		2FF3EB48587DD2DC5241CABC /* libPods-HHUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6B7E4C65359B3AF85E364F /* libPods-HHUtil.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		18C6397121BA5AD000E059A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C6398121BA693A00E059A1 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		18C6398221BA693A00E059A1 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		3D571C7333D4BA71D2D5F413 /* Pods-HHUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHUtil/Pods-HHUtil.release.xcconfig"; sourceTree = "<group>"; };
+		7E6B7E4C65359B3AF85E364F /* libPods-HHUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHUtil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		978C14E382FF7B3D86FC54E8 /* Pods-HHUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHUtil/Pods-HHUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF3EB48587DD2DC5241CABC /* libPods-HHUtil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,8 @@
 				18C6396321BA5AD000E059A1 /* HHUtilTests */,
 				18C6396E21BA5AD000E059A1 /* HHUtilUITests */,
 				18C6394621BA5ACF00E059A1 /* Products */,
+				F8FF573979EE47898676739A /* Pods */,
+				7482DBE29E55BC326B4E8530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +155,23 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		7482DBE29E55BC326B4E8530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E6B7E4C65359B3AF85E364F /* libPods-HHUtil.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8FF573979EE47898676739A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				978C14E382FF7B3D86FC54E8 /* Pods-HHUtil.debug.xcconfig */,
+				3D571C7333D4BA71D2D5F413 /* Pods-HHUtil.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18C6397421BA5AD000E059A1 /* Build configuration list for PBXNativeTarget "HHUtil" */;
 			buildPhases = (
+				080C4162644E4B496F0A06C8 /* [CP] Check Pods Manifest.lock */,
 				18C6394121BA5ACF00E059A1 /* Sources */,
 				18C6394221BA5ACF00E059A1 /* Frameworks */,
 				18C6394321BA5ACF00E059A1 /* Resources */,
@@ -272,6 +297,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		080C4162644E4B496F0A06C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HHUtil-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18C6394121BA5ACF00E059A1 /* Sources */ = {
@@ -449,6 +499,7 @@
 		};
 		18C6397521BA5AD000E059A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 978C14E382FF7B3D86FC54E8 /* Pods-HHUtil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +518,7 @@
 		};
 		18C6397621BA5AD000E059A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D571C7333D4BA71D2D5F413 /* Pods-HHUtil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
